@@ -45,6 +45,6 @@ $domain.     14400   IN      MX      5       ALT2.ASPMX.L.GOOGLE.COM.
 $domain.     14400   IN      MX      10       ALT3.ASPMX.L.GOOGLE.COM.
 EOF
 	echo "Google MX records were added to /var/named/$domain.db , please review that file to see if everything is correct"
-	service named reload
+	systemctl reload named.service
 fi
 echo
